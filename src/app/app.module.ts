@@ -5,10 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { BookComponent } from './book/book.component';
-import { BookDetailComponent } from './book-detail/book-detail.component';
-import { BookCreateComponent } from './book-create/book-create.component';
-import { BookEditComponent } from './book-edit/book-edit.component';
 import { SupplierComponent } from './supplier/supplier.component';
 import { SupplierCreateComponent } from './supplier-create/supplier-create.component';
 import { SupplierDetailsComponent } from './supplier-details/supplier-details.component';
@@ -35,38 +31,14 @@ const appRoutes: Routes = [
     component: SupplierEditComponent,
     data: { title: 'Edit Supplier' }
   },
-  {
-    path: 'books',
-    component: BookComponent,
-    data: { title: 'Book List' }
-  },
-  {
-    path: 'book-details/:id',
-    component: BookDetailComponent,
-    data: { title: 'Book Details' }
-  },
-  {
-    path: 'book-create',
-    component: BookCreateComponent,
-    data: { title: 'Create Book' }
-  },
-  {
-    path: 'book-edit/:id',
-    component: BookEditComponent,
-    data: { title: 'Edit Book' }
-  },
   { path: '',
-    redirectTo: '/books',
+    redirectTo: '/suppliers',
     pathMatch: 'full'
   }
 ];
 @NgModule({
   declarations: [
     AppComponent,
-    BookComponent,
-    BookDetailComponent,
-    BookCreateComponent,
-    BookEditComponent,
     SupplierComponent,
     SupplierCreateComponent,
     SupplierDetailsComponent,
