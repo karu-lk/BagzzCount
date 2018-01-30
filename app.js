@@ -5,6 +5,7 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 
 var supplier = require('./routes/supplier');
+//var home = require('./routes/home');
 var app = express();
 
 var mongoose = require('mongoose');
@@ -17,6 +18,9 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ 'extended': 'false' }));
 app.use(express.static(path.join(__dirname, 'dist')));
+
+//app.use('/home', express.static(path.join(__dirname, 'dist')));
+//app.use('/home', home);
 
 app.use('/suppliers', express.static(path.join(__dirname, 'dist')));
 app.use('/supplier', supplier);

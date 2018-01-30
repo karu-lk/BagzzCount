@@ -9,6 +9,7 @@ import { SupplierComponent } from './supplier/supplier.component';
 import { SupplierCreateComponent } from './supplier-create/supplier-create.component';
 import { SupplierDetailsComponent } from './supplier-details/supplier-details.component';
 import { SupplierEditComponent } from './supplier-edit/supplier-edit.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
   {
@@ -31,9 +32,12 @@ const appRoutes: Routes = [
     component: SupplierEditComponent,
     data: { title: 'Edit Supplier' }
   },
-  { path: '',
-    redirectTo: '/suppliers',
-    pathMatch: 'full'
+  {
+    path: '',
+    component: HomeComponent,
+    data: { title: 'Home Page' }
+    //redirectTo: '/home',
+    //pathMatch: 'full'
   }
 ];
 @NgModule({
@@ -42,7 +46,8 @@ const appRoutes: Routes = [
     SupplierComponent,
     SupplierCreateComponent,
     SupplierDetailsComponent,
-    SupplierEditComponent
+    SupplierEditComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
