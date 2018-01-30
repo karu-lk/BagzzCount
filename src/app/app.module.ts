@@ -9,8 +9,32 @@ import { BookComponent } from './book/book.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BookCreateComponent } from './book-create/book-create.component';
 import { BookEditComponent } from './book-edit/book-edit.component';
+import { SupplierComponent } from './supplier/supplier.component';
+import { SupplierCreateComponent } from './supplier-create/supplier-create.component';
+import { SupplierDetailsComponent } from './supplier-details/supplier-details.component';
+import { SupplierEditComponent } from './supplier-edit/supplier-edit.component';
 
 const appRoutes: Routes = [
+  {
+    path: 'suppliers',
+    component: SupplierComponent,
+    data: { title: 'Supplier List' }
+  },
+  {
+    path: 'supplier-details/:id',
+    component: SupplierDetailsComponent,
+    data: { title: 'Supplier Details' }
+  },
+  {
+    path: 'supplier-create',
+    component: SupplierCreateComponent,
+    data: { title: 'Create Supplier' }
+  },
+  {
+    path: 'supplier-edit/:id',
+    component: SupplierEditComponent,
+    data: { title: 'Edit Supplier' }
+  },
   {
     path: 'books',
     component: BookComponent,
@@ -42,7 +66,11 @@ const appRoutes: Routes = [
     BookComponent,
     BookDetailComponent,
     BookCreateComponent,
-    BookEditComponent
+    BookEditComponent,
+    SupplierComponent,
+    SupplierCreateComponent,
+    SupplierDetailsComponent,
+    SupplierEditComponent
   ],
   imports: [
     BrowserModule,
