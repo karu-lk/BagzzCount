@@ -1,11 +1,4 @@
-<p>Supplier</p>
-<a [routerLink]="['/suppliers']" class="btn btn-success">View Suppliers</a>
-
-
-
-
 <div class="overlay"></div>
-
 <div class="masthead">
   <div class="masthead-bg"></div>
   <div class="container h-100">
@@ -24,11 +17,11 @@
                         <h1>Log in with your email account</h1>
                         <form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
                           <div class="form-group">
-                            <label for="email" >Email</label>
+                            <label for="email">Email</label>
                             <input type="email" name="email" id="email" class="form-control" placeholder="somebody@example.com">
                           </div>
                           <div class="form-group">
-                            <label for="key" >Password</label>
+                            <label for="key">Password</label>
                             <input type="password" name="key" id="key" class="form-control" placeholder="Password">
                           </div>
                           <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in">
@@ -79,9 +72,10 @@
 <div class="social-icons">
   <ul class="list-unstyled text-center mb-0">
     <li class="list-unstyled-item">
-      <a href="#">
+      <a [routerLink]="['/suppliers']" class="btn btn-success">View Suppliers</a>
+      <!-- <a href="#">
         <i class="fa fa-twitter"></i>
-      </a>
+      </a> -->
     </li>
     <li class="list-unstyled-item">
       <a href="#">
