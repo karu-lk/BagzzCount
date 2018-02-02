@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>List of Orders
+    <a [routerLink]="['/order-create']" class="btn btn-default btn-lg">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    </a>
+  </h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Order #</th>
+        <th>Supplier</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.number }}</td>
+        <td>{{ order.supplierName }}</td>
+        <td><a [routerLink]="['/order-details', order._id]">Show Detail</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

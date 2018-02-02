@@ -10,6 +10,10 @@ import { SupplierCreateComponent } from './supplier-create/supplier-create.compo
 import { SupplierDetailsComponent } from './supplier-details/supplier-details.component';
 import { SupplierEditComponent } from './supplier-edit/supplier-edit.component';
 import { HomeComponent } from './home/home.component';
+import { OrderComponent } from './order/order.component';
+import { OrderCreateComponent } from './order-create/order-create.component';
+import { OrderDetailsComponent } from './order-details/order-details.component';
+import { OrderEditComponent } from './order-edit/order-edit.component';
 
 const appRoutes: Routes = [
   {
@@ -36,8 +40,26 @@ const appRoutes: Routes = [
     path: '',
     component: HomeComponent,
     data: { title: 'Home Page' }
-    //redirectTo: '/home',
-    //pathMatch: 'full'
+  },
+  {
+    path: 'orders',
+    component: OrderComponent,
+    data: { title: 'Make an Order' }
+  },
+  {
+    path: 'order-details/:id',
+    component: OrderDetailsComponent,
+    data: { title: 'Order Details' }
+  },
+  {
+    path: 'order-create',
+    component: OrderCreateComponent,
+    data: { title: 'Create Order' }
+  },
+  {
+    path: 'order-edit/:id',
+    component: OrderEditComponent,
+    data: { title: 'Edit Order' }
   }
 ];
 @NgModule({
@@ -47,7 +69,11 @@ const appRoutes: Routes = [
     SupplierCreateComponent,
     SupplierDetailsComponent,
     SupplierEditComponent,
-    HomeComponent
+    HomeComponent,
+    OrderComponent,
+    OrderCreateComponent,
+    OrderDetailsComponent,
+    OrderEditComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 
 var supplier = require('./routes/supplier');
+var order = require('./routes/order');
 var app = express();
 
 var mongoose = require('mongoose');
@@ -22,6 +23,8 @@ app.use(express.static(__dirname + '/src'))
 
 app.use('/suppliers', express.static(path.join(__dirname, 'dist')));
 app.use('/supplier', supplier);
+app.use('/orders', express.static(path.join(__dirname, 'dist')));
+app.use('/order', order);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
