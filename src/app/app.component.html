@@ -1,1 +1,26 @@
-<router-outlet></router-outlet>
+<nav class="navbar navbar-fixed-top navbar-light bg-inverse top-navbar">
+    <div class="container">
+        <div>
+            <h1 class="mb-3">Bagzz Count</h1>
+            <p class="mb-5">A
+                <strong>MEAN</strong> App
+        </div>
+        <ul class="nav navbar-nav" routerLinkActive="active">
+            <li class="nav-item">
+                <a [routerLink]="['/']" >Home</a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/suppliers']" >View Suppliers</a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/suppliers']" >About</a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/suppliers']" >Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="router-container">
+    <router-outlet></router-outlet>
+</div>

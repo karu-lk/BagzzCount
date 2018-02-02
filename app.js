@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ 'extended': 'false' }));
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.use(express.static(__dirname+'/src'))
+app.use(express.static(__dirname + '/src'))
 
 app.use('/suppliers', express.static(path.join(__dirname, 'dist')));
 app.use('/supplier', supplier);
